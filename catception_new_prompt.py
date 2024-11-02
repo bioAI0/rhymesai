@@ -82,7 +82,7 @@ response = client.chat.completions.create(
                 },
                 {
                     "type": "text",
-                    "text": f"<image><image>\nBased on these two images and the previous prompt which was {previous_prompt}, please make a new prompt for a diffusion-based video generation image that is designed to be extremely engaging for viewers so much so they can't tear their eyes away."
+                    "text": f"<image><image>\nBased on these two images and the previous prompt which was <previous_prompt>{previous_prompt}</previous_prompt>, please make a new prompt for a diffusion-based video generation image that is designed to be extremely engaging for viewers so much so they can't tear their eyes away.  Please make the cat be doing something and have some motion.  Please try to keep the same style but introduce some changes to the prompt.  Please make the prompt a short succinct sentence.  "
                 }
             ]
         }

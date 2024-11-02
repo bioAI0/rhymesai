@@ -1,6 +1,7 @@
 import os
 import sys
 import requests
+import random
 
 def generate_video(token, prompt):
     url = "https://api.rhymes.ai/v1/generateVideoSyn"
@@ -13,7 +14,7 @@ def generate_video(token, prompt):
         "num_step": 100,
         "cfg_scale": 7.5,
         "user_prompt": prompt,
-        "rand_seed": 12345
+        "rand_seed": random.randint(1, 10000)
     }
 
     try:

@@ -82,7 +82,7 @@ response = client.chat.completions.create(
                 },
                 {
                     "type": "text",
-                    "text": f"<image><image>\nPlease rate the cuteness of these two images on a scale from 1 to 100 on a variety of measures including cuteness, how engaging the image is and if there are any visual distortions but be a very harsh judge with an average score for a cute cat being 50 from the prompt {previous_prompt}"
+                    "text": f"<image><image>\nPlease rate the cuteness of these two images on a scale from 1 to 100 on a variety of measures including cuteness, how engaging the image is but be a very harsh judge with an average score for a cute cat being 50 from the prompt {previous_prompt}.  Please also note if there are any visual distortions."
                 }
             ]
         }

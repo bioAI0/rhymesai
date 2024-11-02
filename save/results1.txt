@@ -1,0 +1,11 @@
+Image 1: 
+- Cuteness: 65/100
+- Engagement: 70/100
+- Visual Distortions: No
+
+Image 2:
+- Cuteness: 75/100
+- Engagement: 75/100
+- Visual Distortions: No
+
+Both images feature a kitten with a tiny pink nose and soft, fluffy fur. Image 2 is slightly more engaging because the kitten's eyes are more visible and it appears more alert, adding to its cuteness. Image 1 is blurred, which slightly reduces its engagement score. The overall cuteness and engagement are above average, but both images lack the glowing eyes prompt.
