@@ -1,5 +1,6 @@
 import base64
 import os
+import sys
 from openai import OpenAI
 
 base_url = 'https://api.rhymes.ai/v1'
@@ -29,8 +30,37 @@ def image_to_base64(image_path):
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
-base64_image_1 = image_to_base64('image1.jpg')
-base64_image_2 = image_to_base64('image2.jpg')
+def read_previous_prompt(file_path):
+    """
+    Reads the previous prompt from a specified file.
+
+    Args:
+        file_path (str): The path to the file containing the previous prompt.
+
+    Returns:
+        str: The previous prompt string.
+    """
+    try:
+        with open(file_path, "r") as file:
+            return file.read().strip()
+    except FileNotFoundError:
+        return "Prompt file not found. Please check the path."
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+
+# Check for the required number of command-line arguments
+if len(sys.argv) < 4:
+    print("Usage: python script.py <prompt_file> <image1_path> <image2_path>")
+    sys.exit(1)
+
+# Get the file name and image paths from command-line arguments
+prompt_file = sys.argv[1]
+image1_path = sys.argv[2]
+image2_path = sys.argv[3]
+
+previous_prompt = read_previous_prompt(prompt_file)
+base64_image_1 = image_to_base64(image1_path)
+base64_image_2 = image_to_base64(image2_path)
 
 response = client.chat.completions.create(
     model="aria",  # Model name updated
@@ -52,7 +82,7 @@ response = client.chat.completions.create(
                 },
                 {
                     "type": "text",
-                    "text": "<image><image>\nPlease rate the cutness of these two images on a scale from 1 to 100 on a variety of measures including cuteness, how engaging the image is and if there are any visual distortions but be a very harsh judge with an average score for a cute cat being 50.  Based on this and the previous prompt which was 'generate images of adorable cats' please make a new prompt for a diffusion based video generation image that is designed to be extremely engaging for viewers so much so they can't tear their eyes away.  "
+                    "text": f"<image><image>\nPlease rate the cuteness of these two images on a scale from 1 to 100 on a variety of measures including cuteness, how engaging the image is but be a very harsh judge with an average score for a cute cat being 50 from the prompt {previous_prompt}.  Please also note if there are any visual distortions."
                 }
             ]
         }
@@ -65,3 +95,6 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+
+
+    
