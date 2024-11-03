@@ -1,0 +1,9 @@
+For the first image:
+Cuteness: 75/100
+Engagement: 85/100
+Visual Distortions: None detected
+
+For the second image:
+Cuteness: 70/100
+Engagement: 80/100
+Visual Distortions: None detected

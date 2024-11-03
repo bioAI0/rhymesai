@@ -1,0 +1,9 @@
+The first image:
+- Cuteness: 70
+- Engagement: 85
+- Visual Distortions: None
+
+The second image:
+- Cuteness: 75
+- Engagement: 80
+- Visual Distortions: None
