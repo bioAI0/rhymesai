@@ -1,0 +1,15 @@
+Image 1: 
+Cuteness: 85
+Engagement: 90
+Visual Distortions: 0
+
+The cat in this image has a playful and intriguing look with a large hat covering most of its face. The tilt of the hat adds a mysterious and stylish element that makes the image very engaging. The lighting highlights the cat's features, emphasizing its whiskers and eyes, creating an engaging and adorable scene.
+
+Image 2: 
+Cuteness: 88
+Engagement: 95
+Visual Distortions: 0
+
+This image is more dynamic, with the cat clearly visible and its eyes gleaming with determination. The tilt of the hat and the subtle head tilt add to the detective persona, making it more engaging. The strong contrast and lighting enhance the cat's features, giving it a confident and ready-to-solve-the-case look. The overall composition is very appealing. 
+
+Average score: 86.5
